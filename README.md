@@ -1,4 +1,4 @@
-# Nama Proyek Anda
+# PT. Kasir Pintar Internasional Test Skill - Penganjuan Reimbursement
 
 Ini merupakan hasil test skill yang saya lakukan di PT. Kasir Pintar Internasional. Di dalam tes tersebut saya diuji untuk membuat aplikasi sederhana tentang Reimbursement. Terdapat role yang berbeda untuk mengakses setiap halaman role tersebut terdiri dari Super Admin, Director, Finance, dan Staff. Aplikasi ini saya diwajibkan untuk menggunakan Laravel 10. Berikut instalasi yang bisa Anda lalkukan jika hendak mengetahui detailn dan cara kerjanya.
 
