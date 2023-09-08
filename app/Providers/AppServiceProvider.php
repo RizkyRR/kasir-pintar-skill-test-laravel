@@ -31,16 +31,17 @@ class AppServiceProvider extends ServiceProvider
     date_default_timezone_set('Asia/Jakarta');
 
     View::composer('*', function ($view) use ($auth) {
-      $view->with('AuthData', $auth->user());
+      $menus = Menu::where('upid', '0')->orderBy('position', 'ASC')->get();
+      $menu = new Menu();
+      $userMenuAuthorization = new UserMenuAuthorization();
+
+      $view->with([
+        'AuthData' => $auth->user(),
+        'menus' => $menus,
+        'menu' => $menu,
+        'userMenuAuthorization' => $userMenuAuthorization
+      ]);
     });
-
-    $menus = Menu::where('upid', '0')->orderBy('position', 'ASC')->get();
-    $menu = new Menu();
-    $userMenuAuthorization = new UserMenuAuthorization();
-
-    View::share('menus', $menus);
-    View::share('menu', $menu);
-    View::share('userMenuAuthorization', $userMenuAuthorization);
 
     Paginator::useBootstrap();
 
